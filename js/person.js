@@ -935,6 +935,10 @@ var Person = Class.create(AbstractPerson, {
             info['lName'] = this.getLastName();
         if (this.getLastNameAtBirth() != "")
             info['lNameAtB'] = this.getLastNameAtBirth();
+        if (this.getJob() != "")
+            info['job'] = this.getJob();
+        if (this.getEducation() != "")
+            info['education'] = this.getEducation();
         if (this.getExternalID() != "")
             info['externalID'] = this.getExternalID();        
         if (this.getBirthDate() != "") 
@@ -993,6 +997,12 @@ var Person = Class.create(AbstractPerson, {
             }
             if(info.lNameAtB && this.getLastNameAtBirth() != info.lNameAtB) {
                 this.setLastNameAtBirth(info.lNameAtB);
+            }
+            if(info.job && this.getJob() != info.job) {
+                this.setJob(info.job);
+            }
+            if(info.education && this.getEducation() != info.education) {
+                this.setEducation(info.education);
             }
             if (info.externalID && this.getExternalID() != info.externalID) {
                 this.setExternalID(info.externalID);

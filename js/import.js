@@ -1210,7 +1210,9 @@ PedigreeImport.JSONToInternalPropertyMapping = {
         "externalid":      "externalID",
         "numpersons":      "numPersons",
         "lostcontact":     "lostContact",
-        "nodenumber":      "nodeNumber"
+        "nodenumber":      "nodeNumber",
+        "job": "job",
+        "education": "education"
     };
 
 
