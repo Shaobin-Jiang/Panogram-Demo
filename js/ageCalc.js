@@ -24,7 +24,7 @@ function getAge(birthDate, deathDate)
     var age = now.getTime() - birthDate.getTime();
 
     if (age < 0) {
-        return "not born yet"
+        return "未出生"
     }
 
     var years = (new Date(now.getTime() - aMonth* (birthDate.getMonth()) )).getFullYear()
@@ -46,21 +46,21 @@ function getAge(birthDate, deathDate)
         if (days <21)
         {
             if (days == 1) {
-                agestr = days + ' day';
+                agestr = days + ' 天';
             }
             else {
-                agestr = days + ' days';
+                agestr = days + ' 天';
             }
         }
         else if (days < 60) {
             var weeks = Math.floor(age / aWeek);
-            agestr = weeks + " wk";
+            agestr = weeks + " 周";
         } else
         {
-            agestr = months + ' mo';
+            agestr = months + ' 月';
         }
     } else {
-        agestr = years + " y";
+        agestr = years + " 岁";
     }
     return agestr;
 }

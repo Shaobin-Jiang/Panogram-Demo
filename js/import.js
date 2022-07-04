@@ -1191,7 +1191,7 @@ PedigreeImport.initFromGEDCOM = function(inputText, markEvaluated, saveIDAsExter
 // TODO: convert internal properties to match public names and rename this to "supportedProperties"
 PedigreeImport.JSONToInternalPropertyMapping = {
         "proband":         "proband", 
-        "lastname":        "lName",
+        "lastName":        "lName",
         "lastnameatbirth": "lNameAtB",
         "comments":        "comments",
         "twingroup":       "twinGroup",

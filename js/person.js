@@ -54,6 +54,24 @@ var Person = Class.create(AbstractPerson, {
         this._evaluated = false;
         this._pedNumber = "";
         this._lostContact = false;
+        this._job = "";
+        this._education = "";
+    },
+
+    setJob: function(job) {
+        this._job = job;
+    },
+
+    getJob: function() {
+        return this._job
+    },
+
+    setEducation: function(education) {
+        this._education = education;
+    },
+
+    getEducation: function() {
+        return this._education
     },
 
     /**
@@ -96,7 +114,6 @@ var Person = Class.create(AbstractPerson, {
      * @param firstName
      */
     setFirstName: function(firstName) {
-        firstName && (firstName = firstName.charAt(0).toUpperCase() + firstName.slice(1));
         this._firstName = firstName;
         this.getGraphics().updateNameLabel();
     },
@@ -118,7 +135,6 @@ var Person = Class.create(AbstractPerson, {
      * @param lastName
      */
     setLastName: function(lastName) {
-        lastName && (lastName = lastName.charAt(0).toUpperCase() + lastName.slice(1));
         this._lastName = lastName;
         this.getGraphics().updateNameLabel();
         return lastName;
@@ -875,6 +891,8 @@ var Person = Class.create(AbstractPerson, {
             first_name:    {value : this.getFirstName()},
             last_name:     {value : this.getLastName()},
             last_name_birth: {value: this.getLastNameAtBirth()}, //, inactive: (this.getGender() != 'F')},
+            job: {value: this.getJob()},
+            education: {value: this.getEducation()},
             external_id:   {value : this.getExternalID()},
             gender:        {value : this.getGender(), inactive: inactiveGenders},
             date_of_birth: {value : this.getBirthDate(), inactive: this.isFetus()},
